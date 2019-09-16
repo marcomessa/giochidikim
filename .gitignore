@@ -1,0 +1,16 @@
+.DS_Store
+*.log
+bootstrap
+config
+modules
+node_modules
+!plugins
+plugins/*
+!plugins/up
+storage
+vendor
+.env
+.htaccess
+artisan
+.idea
+server.php
