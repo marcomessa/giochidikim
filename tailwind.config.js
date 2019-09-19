@@ -18,6 +18,12 @@ module.exports = {
       orange: '#d98724',
       lightblue: '#96c6bb',
       yellow: '#f7ecbd',
+      rosino: '#e9d5d2',
+      azzurro: '#cae1e5';
+      verde-acqua: '#bee8dd',
+      giallo-chiaro: '#f0eeb1',
+      rosa: '#eaadb9',
+
 
 
       'gray': {
