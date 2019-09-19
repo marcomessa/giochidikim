@@ -17,6 +17,7 @@ module.exports = {
       red: '#d9151d',
       orange: '#d98724',
       lightblue: '#96c6bb',
+      yellow: '#f7ecbd',
 
 
       'gray': {
@@ -129,8 +130,8 @@ module.exports = {
     },
     fontFamily: {
       sans: [
-         'Amatic sc',
         'Quicksand',
+        'Amatic sc',
         'sans-serif',
         '"Apple Color Emoji"',
         '"Segoe UI Emoji"',
