@@ -1,0 +1,72 @@
+title = "Kim"
+url = "/kim"
+layout = "base"
+is_hidden = 0
+==
+
+{% partial 'shared/header-contact' %}
+
+{% partial 'shared/header' %}
+
+<div class="bg-cover bg-center h-40"
+     style="background-image: url({{ 'assets/img/giochi-di-kim.jpg'| theme }})">
+    <h2 class="text-4xl text-white text-center pt-8 font-title">giochi di kim</h2>
+    <p class="text-center text-white">una visione del gioco come attività che riesca a stimolare le capacità motorie, cognitive, intellettive e creative di ogni bimbo.</p>
+</div>
+
+<div class="container">
+ <div class="flex -mx-3 pt-10 pb-16">
+     <div class="w-full md:w-1/2 flex flex-col text-right mx-3">
+         <img width="580" src="{{ 'assets/img/img-elefant.png'| theme }}" alt="giochi di kim">
+         <img class="pt-5" width="338" src="{{ 'assets/img/img-dadi.jpg'| theme }}" alt="giochi di kim">
+     </div>
+
+     <div class="w-full md:w-1/2 mx-3">
+        <h2 class="text-orange text-6xl leading-none pb-10 font-title">l'avventura <br> di imparare</h2>
+         <p class="pb-3">
+             Giochi di Kim è una realtà nata con l’intento di non rappresentare solamente un negozio di giocattoli ma bensì di differenziarsi sul mercato per l’attenzione e la cura all’attività ludica del bambino attraverso la scelta di attività e libri volti allo <b>sviluppo cognitivo infantile e l’autoapprendimento attraverso il gioco</b>. Attraverso i nostri giochi formativi il bambino sviluppa <b>creatività, conoscenza, sperimentazione e scoperta,</b> ponendo le basi per l’apprendimento delle discipline scolastiche.
+         </p>
+         <p>
+             In questo percorso si colloca anche la scelta del nome del negozio. Kim, protagonista dell’omonimoromanzodi Rudyard Kipling, sviluppa abilità e spirito d’osservazione apprendendo dall’esperienza nella vita quotidiana. Kim rappresenta i valori e la nostra visione del bambino attivo nel gioco, che sviluppa, elabora ed acquisisce ogni giorno capacità nuove per essere protagonista della vita.
+         </p>
+         <img class="py-4" width="136" src="{{ 'assets/img/puntini.png'| theme }}" alt="giochi di kim">
+         <p>
+             Presso il nostro negozio organizziamo anche attività e incontri per stimolare le <b>capacità motorie, cognitive, intellettive e creative di ogni bimbo.</b>
+         </p>
+         <button class="border border-orange font-bold hover:bg-orange hover:text-white px-2 py-1 text-orange mt-4">Scopri la nostra Carta dei Servizi</button>
+     </div>
+ </div>
+</div>
+
+<div class="bg-cover bg-center mb-12"
+     style="background-image: url({{ 'assets/img/background.jpg'| theme }})">
+    <div class="container">
+        <div class="flex -mx-3 py-10">
+            <div class="w-full md:w-1/2 mx-3">
+                <h2 class="text-lightblue text-6xl leading-none pb-10 font-title">rispetto <br> per la natura</h2>
+                <p>Il nostro impegno per il rispetto dell’ambiente e della natura ci ha portati a creare una collaborazione con Associazioni del nostro territorio, che promuovono e tutelano i diritti degli animali per donare loro il nostro prezioso contributo e sensibilizzare i nostri piccoli clienti sull’importanza e l’equilibrio del rapporto tra animale – bambino – natura. </p>
+            </div>
+            <div class="w-full md:w-1/2 mx-3">
+                <img class="py-4" width="571" src="{{ 'assets/img/child.jpg'| theme }}" alt="giochi di kim">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <h3 class="text-orange text-center font-title text-5xl">i nostri marchi</h3>
+    <p class="text-center">Una visione del gioco come attività che riesca a stimolare le capacità motorie, cognitive, intellettive e creative di ogni bimbo.</p>
+    <ul class="flex pt-10 pb-16 justify-center">
+        <li class="mx-4"> <img width="90" src="{{ 'assets/img/gowi.jpg'| theme }}" alt="gowi"></li>
+        <li class="mx-4"> <img width="90" src="{{ 'assets/img/gotz.jpg'| theme }}" alt="gotz"></li>
+        <li class="mx-4"> <img width="90" src="{{ 'assets/img/diset.jpg'| theme }}" alt="diset"></li>
+        <li class="mx-4"> <img width="90" src="{{ 'assets/img/calafant.jpg'| theme }}" alt="calafant"></li>
+        <li class="mx-4"> <img width="90" src="{{ 'assets/img/totum.jpg'| theme }}" alt="totum"></li>
+        <li class="mx-4"> <img width="90" src="{{ 'assets/img/stephen.jpg'| theme }}" alt="stephen"></li>
+    </ul>
+</div>
+
+
+
+{% partial 'shared/footer' %}

@@ -15,6 +15,9 @@ module.exports = {
       black: '#000',
       white: '#fff',
       red: '#d9151d',
+      orange: '#d98724',
+      lightblue: '#96c6bb',
+
 
       'gray': {
         100: '#F2F2F2',
@@ -94,7 +97,10 @@ module.exports = {
       outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
       none: 'none',
     },
-    container: {},
+    container: {
+      center: true,
+      padding: '1rem'
+    },
     cursor: {
       auto: 'auto',
       default: 'default',
@@ -123,6 +129,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
+         'Amatic sc',
         'Quicksand',
         'sans-serif',
         '"Apple Color Emoji"',
@@ -130,6 +137,7 @@ module.exports = {
         '"Segoe UI Symbol"',
         '"Noto Color Emoji"',
       ],
+
       serif: [
         'Georgia',
         'Cambria',

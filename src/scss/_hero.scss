@@ -1,0 +1,6 @@
+.hero{
+  @apply flex flex-wrap h-full pb-20 pt-8 font-polimor;
+  &__item {
+    @apply h-1/3 w-full bg-cover bg-center flex items-center p-8 relative;
+  }
+}
