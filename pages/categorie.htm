@@ -1,0 +1,74 @@
+title = "Categorie"
+url = "/categorie"
+layout = "base"
+is_hidden = 0
+==
+
+{% partial 'shared/header-contact' %}
+
+{% partial 'shared/header' %}
+
+<div class="bg-cover bg-center h-40"
+     style="background-image: url({{ 'assets/img/giochi-di-kim.jpg'| theme }})">
+    <h2 class="text-4xl text-white text-center pt-8 font-title">Giochi educativi per tutte le età</h2>
+    <p class="text-center text-white">una visione del gioco come attività che riesca a stimolare le capacità motorie, cognitive, intellettive e creative di ogni bimbo.</p>
+</div>
+
+<div class="container">
+    <div class="flex -mx-4">
+        <div class="w-1/3 pt-16 px-4">
+            <p class="bg-orange text-white uppercase font-bold py-3 px-6">categorie</p>
+            <ul class="uppercase font-bold text-sm px-6 py-3">
+                <li class="py-3">prima infanzia</li>
+                <li class="py-3">Giochi educativi e musicali</li>
+                <li class="py-3">giochi d'imitazione</li>
+                <li class="py-3">giochi creativi</li>
+                <li class="py-3">giochi di società</li>
+                <li class="py-3">giochi all'aria aperta</li>
+                <li class="py-3">libri per bambini</li>
+                <li class="py-3">accessori e arredo cameretta</li>
+            </ul>
+
+            <p class="bg-orange text-white uppercase font-bold py-3 px-6 mt-20">fasce d'età</p>
+            <ul class="uppercase font-bold text-sm px-6 py-3">
+                <li class="py-3 flex">
+                    <img width="35" src="{{ 'assets/img/baby.jpg'| theme }}" alt="giochi di kim">
+                   <p class="pl-3 pt-1">da 0 a 1 anni</p>
+                </li>
+                <li class="py-3 flex">
+                    <img width="35" src="{{ 'assets/img/baby.jpg'| theme }}" alt="giochi di kim">
+                    <p class="pl-3 pt-1">da 1 a 3 anni</p>
+                </li>
+                <li class="py-3 flex">
+                    <img width="35" src="{{ 'assets/img/baby.jpg'| theme }}" alt="giochi di kim">
+                    <p class="pl-3 pt-1">da 3 in poi</p>
+                </li>
+                <li class="py-3 flex">
+                    <img width="35" src="{{ 'assets/img/baby.jpg'| theme }}" alt="giochi di kim">
+                    <p class="pl-3 pt-1">da 6 in poi</p>
+                </li>
+                <li class="py-3 flex">
+                    <img width="35" src="{{ 'assets/img/baby.jpg'| theme }}" alt="giochi di kim">
+                    <p class="pl-3 pt-1">da 8 in poi</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="w-2/3 px-4 pt-16">
+            <div class="flex flex-wrap -mx-4">
+            <div class="w-full md:w-1/2 px-4">
+                <img class="w-full pb-8" src="{{ 'assets/img/peluches.jpg'| theme }}" alt="giochi di kim">
+                <img class="w-full pb-8" src="{{ 'assets/img/sensoriali.jpg'| theme }}" alt="giochi di kim">
+                <img class="w-full pb-8" src="{{ 'assets/img/trainabili.jpg'| theme }}" alt="giochi di kim">
+            </div>
+            <div class="w-full md:w-1/2 px-4">
+                <img class="w-full pb-8" src="{{ 'assets/img/peluches.jpg'| theme }}" alt="giochi di kim">
+                <img class="w-full pb-8" src="{{ 'assets/img/sensoriali.jpg'| theme }}" alt="giochi di kim">
+                <img class="w-full pb-8" src="{{ 'assets/img/trainabili.jpg'| theme }}" alt="giochi di kim">
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% partial 'shared/footer' %}

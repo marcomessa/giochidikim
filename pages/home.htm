@@ -8,8 +8,99 @@ is_hidden = 0
 
 {% partial 'shared/header' %}
 
-<div class="hero">
-<img class="w-full hero__item" src="{{ 'assets/img/slider-prova.jpg'| theme }}" alt="giochi di kim">
-   <img width="300 hero__bollo" src="{{ 'assets/img/bollo.png'| theme }}" alt="giochi di kim">
-    <h2 class="hero__text">L'avventura di imparare</h2>
+
+<img class="w-full" src="{{'assets/img/slider-prova.jpg'| theme}}" alt="giochi di kim">
+
+<div class="container">
+    <div class="flex flex-wrap pb-12 pt-20 -mx-3">
+        <div class="w-full md:w-1/3 px-3 mt-16">
+           <h2 class="text-orange text-5xl font-title text-center">Giochi creativi</h2>
+            <p class="text-center">Una visione del gioco come attività che riesca a stimolare le capacità motorie, cognitive, intellettive e creative di ogni bimbo.</p>
+        </div>
+        <div class="w-full md:w-2/3 px-3">
+           <div class="flex">
+               <img width="400" src="{{'assets/img/prima-infanzia.jpg'| theme}}" alt="giochi di kim">
+               <div class="bg-yellow">
+                 <div class="text-center mt-32 px-3">
+                     <p class="uppercase font-bold text-sm">prima infanzia</p>
+                     <p class="font-light text-sm">una visione del gioco come attività che riesca a stimolare le capacità</p>
+                 </div>
+               </div>
+           </div>
+        </div>
+    </div>
 </div>
+
+<div class="container">
+    <div class="flex flex-wrap -mx-2">
+            <div class="w-full md:w-1/3 px-2 md:pb-0 pb-6">
+                <img width="365" src="{{'assets/img/giochi-fuori.jpg'| theme}}" alt="giochi di kim">
+            </div>
+            <div class="w-full md:w-1/3 px-2 md:pb-0 pb-6">
+                <img width="365" src="{{'assets/img/societa.jpg'| theme}}" alt="giochi di kim">
+            </div>
+            <div class="w-full md:w-1/3 px-2 md:pb-0 pb-6">
+                <img width="365" src="{{'assets/img/imitazione.jpg'| theme}}" alt="giochi di kim">
+            </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="flex flex-wrap pt-12 pb-20 -mx-3 ">
+        <div class="w-full md:w-2/3 px-3">
+            <div class="flex">
+                <div class="bg-yellow">
+                    <div class="text-center mt-32 px-3">
+                        <p class="uppercase font-bold text-sm leading-none">Giochi educativi e musicali</p>
+                        <p class="font-light text-sm">una visione del gioco come attività che riesca a stimolare le capacità</p>
+                    </div>
+                </div>
+                <img width="400" src="{{'assets/img/giochi-educativi.jpg'| theme}}" alt="giochi di kim">
+            </div>
+        </div>
+        <div class="w-full md:w-1/3 px-3 mt-16">
+            <h2 class="text-orange text-5xl font-title text-center leading-none">Design e qualità</h2>
+            <p class="text-center">Una visione del gioco come attività che riesca a stimolare le capacità motorie, cognitive, intellettive e creative di ogni bimbo.</p>
+        </div>
+    </div>
+</div>
+
+<div class="bg-cover bg-center h-64 mb-12"
+     style="background-image: url({{ 'assets/img/bg-didattica.jpg'| theme }})">
+    <div class="container">
+        <div class="flex">
+            <div class="w-1/3">
+                <h2 class="text-4xl text-white text-center pt-8 font-title">attività didattica</h2>
+                <p class="text-center text-white">Una visione del gioco come attività che riesca a stimolare le capacità motorie, cognitive, intellettive e creative di ogni bimbo.</p>
+                <button class="uppercase text-sm text-white">scopri le date</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h3 class="text-orange text-center font-title text-5xl">i nostri marchi</h3>
+    <p class="text-center">Una visione del gioco come attività che riesca a stimolare le capacità motorie, cognitive, intellettive e creative di ogni bimbo.</p>
+    <ul class="flex pt-10 pb-6 md:pb-16 justify-center">
+        <li class="mx-4"><img width="90" src="{{ 'assets/img/gowi.jpg'| theme }}" alt="gowi"></li>
+        <li class="mx-4"><img width="90" src="{{ 'assets/img/gotz.jpg'| theme }}" alt="gotz"></li>
+        <li class="mx-4"><img width="90" src="{{ 'assets/img/diset.jpg'| theme }}" alt="diset"></li>
+        <li class="mx-4"><img width="90" src="{{ 'assets/img/calafant.jpg'| theme }}" alt="calafant"></li>
+        <li class="mx-4"><img width="90" src="{{ 'assets/img/totum.jpg'| theme }}" alt="totum"></li>
+        <li class="mx-4"><img width="90" src="{{ 'assets/img/stephen.jpg'| theme }}" alt="stephen"></li>
+    </ul>
+</div>
+
+<div class="flex">
+    <div class="w-full md:w-1/2">
+        <img class="w-full" src="{{'assets/img/eventi.jpg'| theme}}" alt="giochi di kim">
+    </div>
+    <div class="w-full md:w-1/2">
+        <p class="uppercase text-xs text-center">news / eventi</p>
+        <h2 class="text-6xl font-title text-center leading-none font-title">Pesaro comics & games 2018</h2>
+        <p class="font-light text-center pt-4 text-smt">24 - 26 AGOSTO 2018 Pesaro, Rocca Costanza</p>
+        <p class="font-bold text-center text-xs pt-8">Vieni a trovarci!</p>
+    </div>
+</div>
+
+{% partial 'shared/footer' %}

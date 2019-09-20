@@ -22,7 +22,7 @@ module.exports = {
       azzurro: '#cae1e5';
       verde-acqua: '#bee8dd',
       giallo-chiaro: '#f0eeb1',
-      rosa: '#eaadb9',
+      pink: '#eaadb9',
 
 
 
