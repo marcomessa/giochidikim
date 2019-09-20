@@ -137,7 +137,6 @@ module.exports = {
     fontFamily: {
       sans: [
         'Quicksand',
-        'Amatic sc',
         'sans-serif',
         '"Apple Color Emoji"',
         '"Segoe UI Emoji"',
