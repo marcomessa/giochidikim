@@ -4,29 +4,29 @@
 
         <div class="w-full">
             <ul class="flex justify-end pt-10 -mx-3">
-                <li class="mx-3 text-orange">Giochi di Kim</li>
-                <li class="mx-3 text-orange">Categorie</li>
-                <li class="mx-3 text-orange">Attività didattiche</li>
-                <li class="mx-3 text-orange">Marchi</li>
-                <li class="mx-3 text-orange">Servizi</li>
-                <li class="mx-3 text-orange">Contatti</li>
+                <a href="{{ 'kim' | page }}"><li class="mx-5 text-orange font-bold">Giochi di Kim</li></a>
+                <a href="{{ 'categorie' | page }}"><li class="mx-5 text-orange font-bold">Categorie</li></a>
+                <a href="{{ 'attivita' | page }}"><li class="mx-5 text-orange font-bold">Attività didattiche</li></a>
+                <a href="{{ 'marchi' | page }}"><li class="mx-5 text-orange font-bold">Marchi</li></a>
+                <a href="{{ 'servizi' | page }}"><li class="mx-5 text-orange font-bold">Servizi</li></a>
+                <a href="{{ 'contatti' | page }}"><li class="mx-5 text-orange font-bold">Contatti</li></a>
             </ul>
         </div>
     </div>
 </div>
 
     <div class="container">
-        <div class="flex">
+        <div class="flex absolute top-0 left-20">
             <div class="w-full">
-                <!-- logo -->
+                <a href="{{ 'home' | page }}"><img width="158" src="{{ 'assets/img/logo-header.png'| theme }}" alt="giochi di kim"></a>
             </div>
         </div>
     </div>
     <div class="bg-orange py-1 mt-6">
-            <div class="container">
+            <div class="container relative">
                 <div class="flex">
                     <div class="w-full">
-                        <ul class="flex -mx-2 text-white justify-end text-sm">
+                        <ul class="flex -mx-2 text-white justify-end text-xs md:text-sm">
                             <li class="uppercase mx-4">da 0 a 1 anni</li>
                             <li class="uppercase mx-4">da 1 a 3 anni</li>
                             <li class="uppercase mx-4">da 3 in poi</li>
