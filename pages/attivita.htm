@@ -3,45 +3,40 @@ url = "/attivita"
 layout = "base"
 is_hidden = 0
 ==
-
-{% partial 'shared/header-contact' %}
-
-{% partial 'shared/header' %}
-
 <div class="bg-cover bg-center h-40"
      style="background-image: url({{ 'assets/img/attività.jpg'| theme }})">
     <h2 class="text-4xl text-white text-center pt-3 md:pt-8 leading-none font-title">Attività didattiche</h2>
-    <p class="text-center text-white">una visione del gioco come attività che riesca a stimolare le capacità motorie, cognitive, intellettive e creative di ogni bimbo.</p>
+    <p class="text-center text-white">una visione del gioco come attività che riesca a stimolare le capacità motorie,
+        cognitive, intellettive e creative di ogni bimbo.</p>
 </div>
 
 <div class="container">
-   <div class="flex flex-wrap pt-16 md:pb-32 -mx-4">
-       <div class="w-full md:w-1/3 pb-6 md:pb-0 px-4">
-           <img class="w-full" src="{{ 'assets/img/img-child.jpg'| theme }}" alt="giochi di kim">
+    <div class="flex flex-wrap pt-16 md:pb-32 -mx-4">
+        <div class="w-full md:w-1/3 pb-6 md:pb-0 px-4">
+            <img class="w-full" src="{{ 'assets/img/img-child.jpg'| theme }}" alt="giochi di kim">
             <div class="text-center py-10 bg-yellow">
                 <p class="uppercase font-bold">i miei primi suoni</p>
                 <p class="font-light px-3">Laboratorio musicale per bambini da 12 a 36 mesi</p>
-                <a href="{{'singola-attivita' | page }}"><button class="text-orange font-bold pt-6">scopri le date</button></a>
+                <a href="{{ 'singola-attivita' | page }}">
+                    <button class="text-orange font-bold pt-6">scopri le date</button>
+                </a>
             </div>
-       </div>
-       <div class="w-full md:w-1/3 pb-6 md:pb-0 px-4">
-           <img class="w-full" src="{{ 'assets/img/img-draw.jpg'| theme }}" alt="giochi di kim">
-           <div class="text-center py-10 bg-yellow">
-               <p class="uppercase font-bold">i miei primi suoni</p>
-               <p class="font-light px-3">Laboratorio musicale per bambini da 12 a 36 mesi</p>
-               <button class="text-orange font-bold pt-6">scopri le date</button>
-           </div>
-       </div>
-       <div class="w-full md:w-1/3 pb-6 md:pb-0 px-4">
-           <img class="w-full" src="{{ 'assets/img/img-bubble.jpg'| theme }}" alt="giochi di kim">
-           <div class="text-center py-10 bg-yellow">
-               <p class="uppercase font-bold">i miei primi suoni</p>
-               <p class="font-light px-3">Laboratorio musicale per bambini da 12 a 36 mesi</p>
-               <button class="text-orange font-bold pt-6">scopri le date</button>
-           </div>
-       </div>
-   </div>
+        </div>
+        <div class="w-full md:w-1/3 pb-6 md:pb-0 px-4">
+            <img class="w-full" src="{{ 'assets/img/img-draw.jpg'| theme }}" alt="giochi di kim">
+            <div class="text-center py-10 bg-yellow">
+                <p class="uppercase font-bold">i miei primi suoni</p>
+                <p class="font-light px-3">Laboratorio musicale per bambini da 12 a 36 mesi</p>
+                <button class="text-orange font-bold pt-6">scopri le date</button>
+            </div>
+        </div>
+        <div class="w-full md:w-1/3 pb-6 md:pb-0 px-4">
+            <img class="w-full" src="{{ 'assets/img/img-bubble.jpg'| theme }}" alt="giochi di kim">
+            <div class="text-center py-10 bg-yellow">
+                <p class="uppercase font-bold">i miei primi suoni</p>
+                <p class="font-light px-3">Laboratorio musicale per bambini da 12 a 36 mesi</p>
+                <button class="text-orange font-bold pt-6">scopri le date</button>
+            </div>
+        </div>
+    </div>
 </div>
-
-
-{% partial 'shared/footer' %}

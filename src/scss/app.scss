@@ -2,11 +2,6 @@
 
 @tailwind components;
 
+@import 'typography';
+
 @tailwind utilities;
-
-.img{
-  display: block;
-  margin:0px auto;
-  text-align: center;
-}
-

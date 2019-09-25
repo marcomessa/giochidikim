@@ -15,16 +15,14 @@ module.exports = {
       black: '#000',
       white: '#fff',
       red: '#d9151d',
-      orange: '#d98724',
+      orange: '#ef8723',
       lightblue: '#96c6bb',
       yellow: '#f7ecbd',
       pink: '#eaadb9',
       rosino: '#e9d5d2',
       azzurro: '#cae1e5',
       verde: '#bee8dd',
-      giallo-chiaro: '#f0eeb1',
-
-
+      'giallo-chiaro': '#f0eeb1',
 
       'gray': {
         100: '#F2F2F2',
@@ -159,7 +157,7 @@ module.exports = {
         '"Courier New"',
         'monospace',
       ],
-      curisve: [
+      cursive: [
         'Amatic SC',
         'cursive'
       ]

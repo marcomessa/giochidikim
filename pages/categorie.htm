@@ -3,15 +3,12 @@ url = "/categorie"
 layout = "base"
 is_hidden = 0
 ==
-
-{% partial 'shared/header-contact' %}
-
-{% partial 'shared/header' %}
-
 <div class="bg-cover h-40"
      style="background-image: url({{ 'assets/img/marchi.jpg'| theme }})">
-    <h2 class="text-4xl text-white text-center md:pt-8 pt-3 font-title leading-none">Giochi educativi per tutte le età</h2>
-    <p class="text-center text-white">una visione del gioco come attività che riesca a stimolare le capacità motorie, cognitive, intellettive e creative di ogni bimbo.</p>
+    <h2 class="text-4xl text-white text-center md:pt-8 pt-3 font-title leading-none">Giochi educativi per tutte le
+        età</h2>
+    <p class="text-center text-white">una visione del gioco come attività che riesca a stimolare le capacità motorie,
+        cognitive, intellettive e creative di ogni bimbo.</p>
 </div>
 
 <div class="container">
@@ -33,7 +30,7 @@ is_hidden = 0
             <ul class="uppercase font-bold text-sm px-6 py-3">
                 <li class="py-3 flex">
                     <img width="35" src="{{ 'assets/img/baby.jpg'| theme }}" alt="giochi di kim">
-                   <p class="pl-3 pt-1">da 0 a 1 anni</p>
+                    <p class="pl-3 pt-1">da 0 a 1 anni</p>
                 </li>
                 <li class="py-3 flex">
                     <img width="35" src="{{ 'assets/img/baby.jpg'| theme }}" alt="giochi di kim">
@@ -56,19 +53,17 @@ is_hidden = 0
 
         <div class="w-full md:w-2/3 px-4 md:pt-16 pt-8 pb-32">
             <div class="flex flex-wrap md:-mx-3 -mx-2">
-            <div class="w-1/2 md:px-3 px-2">
-                <a href="{{'singola-categorie' | page}}"><img class="w-full pb-4 md:pb-6" src="{{ 'assets/img/peluches.jpg'| theme }}" alt="giochi di kim"></a>
-                <img class="w-full pb-4 md:pb-6" src="{{ 'assets/img/sensoriali.jpg'| theme }}" alt="giochi di kim">
-                <img class="w-full pb-4 md:pb-6" src="{{ 'assets/img/trainabili.jpg'| theme }}" alt="giochi di kim">
-            </div>
-            <div class="w-1/2 md:px-3 px-2">
-                <img class="w-full pb-4 md:pb-6" src="{{ 'assets/img/peluches.jpg'| theme }}" alt="giochi di kim">
-                <img class="w-full pb-4 md:pb-6" src="{{ 'assets/img/sensoriali.jpg'| theme }}" alt="giochi di kim">
-                <img class="w-full pb-4 md:pb-6" src="{{ 'assets/img/trainabili.jpg'| theme }}" alt="giochi di kim">
-            </div>
+                <div class="w-1/2 md:px-3 px-2">
+                    <a href="{{ 'singola-categorie' | page }}"><img class="w-full pb-4 md:pb-6" src="{{ 'assets/img/peluches.jpg'| theme }}" alt="giochi di kim"></a>
+                    <img class="w-full pb-4 md:pb-6" src="{{ 'assets/img/sensoriali.jpg'| theme }}" alt="giochi di kim">
+                    <img class="w-full pb-4 md:pb-6" src="{{ 'assets/img/trainabili.jpg'| theme }}" alt="giochi di kim">
+                </div>
+                <div class="w-1/2 md:px-3 px-2">
+                    <img class="w-full pb-4 md:pb-6" src="{{ 'assets/img/peluches.jpg'| theme }}" alt="giochi di kim">
+                    <img class="w-full pb-4 md:pb-6" src="{{ 'assets/img/sensoriali.jpg'| theme }}" alt="giochi di kim">
+                    <img class="w-full pb-4 md:pb-6" src="{{ 'assets/img/trainabili.jpg'| theme }}" alt="giochi di kim">
+                </div>
             </div>
         </div>
     </div>
 </div>
-
-{% partial 'shared/footer' %}
