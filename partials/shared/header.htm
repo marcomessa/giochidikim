@@ -1,6 +1,6 @@
-<header>
+<header class="header">
     <div class="container">
-        <ul class="flex justify-end -mx-2">
+        <ul class="flex justify-end -mx-2 mb-10">
             <li class="px-2">
                 <a class="flex" href="tel:+390721583091">
                     <div class="flex-initial flex justify-center items-center w-6 bg-orange text-white mx-1">
@@ -22,41 +22,52 @@
                 </a>
             </li>
         </ul>
-    </div>
-    <div class="container">
-        <div class="flex flex-wrap">
-            <div class="w-full">
-                <ul class="flex justify-end pt-10 -mx-5">
-                    <a href="{{ 'kim' | page }}">
-                        <li class="px-5 text-orange font-bold">Giochi di Kim</li>
-                    </a>
-                    <a href="{{ 'categorie' | page }}">
-                        <li class="px-5 text-orange font-bold">Categorie</li>
-                    </a>
-                    <a href="{{ 'attivita' | page }}">
-                        <li class="px-5 text-orange font-bold">Attività didattiche</li>
-                    </a>
-                    <a href="{{ 'marchi' | page }}">
-                        <li class="px-5 text-orange font-bold">Marchi</li>
-                    </a>
-                    <a href="{{ 'servizi' | page }}">
-                        <li class="px-5 text-orange font-bold">Servizi</li>
-                    </a>
-                    <a href="{{ 'contatti' | page }}">
-                        <li class="px-5 text-orange font-bold">Contatti</li>
-                    </a>
-                </ul>
+        <div class="flex justify-between flex-wrap">
+            <div class="flex-initial relative">
+                <a class="header__logo" href="{{ 'home' | page }}">
+                    <img width="158" src="{{ 'assets/img/logo-header.png'| theme }}" alt="giochi di kim">
+                </a>
             </div>
+            <ul class="flex flex-initial justify-end -mx-5">
+                <li class="px-5 text-orange font-bold">
+                    <a href="{{ 'kim' | page }}">
+                        Giochi di Kim
+                    </a>
+                </li>
+
+                <li class="px-5 text-orange font-bold">
+                    <a href="{{ 'categorie' | page }}">
+                        Categorie
+                    </a>
+                </li>
+                <li class="px-5 text-orange font-bold">
+                    <a href="{{ 'attivita' | page }}">
+                        Attività didattiche
+                    </a>
+                </li>
+
+                <li class="px-5 text-orange font-bold">
+                    <a href="{{ 'marchi' | page }}">
+                        Marchi
+                    </a>
+                </li>
+
+                <li class="px-5 text-orange font-bold">
+                    <a href="{{ 'servizi' | page }}">
+                        Servizi
+                    </a>
+                </li>
+
+                <li class="px-5 text-orange font-bold">
+                    <a href="{{ 'contatti' | page }}">
+                        Contatti
+                    </a>
+                </li>
+
+            </ul>
         </div>
     </div>
 
-    <div class="container">
-        <div class="flex absolute top-0 left-20">
-            <div class="w-full">
-                <a href="{{ 'home' | page }}"><img width="158" src="{{ 'assets/img/logo-header.png'| theme }}" alt="giochi di kim"></a>
-            </div>
-        </div>
-    </div>
     <div class="bg-orange py-1 mt-6">
         <div class="container">
             <div class="flex relative">
