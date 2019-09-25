@@ -14,3 +14,5 @@ vendor
 artisan
 .idea
 server.php
+assets/js/app.js
+assets/css/app.css
