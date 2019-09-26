@@ -5192,8 +5192,8 @@ _fortawesome_fontawesome__WEBPACK_IMPORTED_MODULE_0__["default"].library.add([_f
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/marcomessa/dev/giochidikim/themes/kim/src/js/app.js */"./src/js/app.js");
-module.exports = __webpack_require__(/*! /Users/marcomessa/dev/giochidikim/themes/kim/src/scss/app.scss */"./src/scss/app.scss");
+__webpack_require__(/*! /Users/pincopallino/dev/giochidikim/themes/giochidikim/src/js/app.js */"./src/js/app.js");
+module.exports = __webpack_require__(/*! /Users/pincopallino/dev/giochidikim/themes/giochidikim/src/scss/app.scss */"./src/scss/app.scss");
 
 
 /***/ })
