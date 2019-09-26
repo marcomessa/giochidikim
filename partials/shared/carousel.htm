@@ -1,0 +1,28 @@
+==
+<?php
+    function onStart() {
+        $this['carousel'] = Up\Kim\Models\Settings::get('gallery');
+    }
+?>
+==
+<div class="relative">
+    <div class="slick">
+        {% for slide in carousel %}
+            <div class="hero-carousel" style="background-image: url({{ slide.image|media }})">
+
+            </div>
+        {% endfor %}
+    </div>
+    <div class="absolute top-0 left-0 w-full h-full">
+        <div class="container h-full">
+            <div class="flex h-full justify-end items-center">
+                <div class="flex-initial">
+                    <div class="bg-orange flex flex-col items-center justify-center h-64 w-64 rounded-full text-center text-white">
+                        <h2 class="uppercase text-5xl leading-none mb-5">L'avventura <br> di imparare</h2>
+                        <p class="uppercase text-black text-xs">Scopri di più</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
