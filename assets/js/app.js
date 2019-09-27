@@ -18821,22 +18821,22 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _fortawesome_fontawesome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fortawesome/fontawesome */ "./node_modules/@fortawesome/fontawesome/index.es.js");
 /* harmony import */ var _fortawesome_fontawesome_free_brands__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fortawesome/fontawesome-free-brands */ "./node_modules/@fortawesome/fontawesome-free-brands/index.es.js");
 /* harmony import */ var _fortawesome_fontawesome_free_solid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/fontawesome-free-solid */ "./node_modules/@fortawesome/fontawesome-free-solid/index.es.js");
-/* harmony import */ var slick_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! slick-slider */ "./node_modules/slick-slider/slick/slick.js");
-/* harmony import */ var slick_slider__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(slick_slider__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var slick_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! slick-slider */ "./node_modules/slick-slider/slick/slick.js");
+/* harmony import */ var slick_slider__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(slick_slider__WEBPACK_IMPORTED_MODULE_5__);
 
 
 
 
 
 _fortawesome_fontawesome__WEBPACK_IMPORTED_MODULE_1__["default"].library.add([_fortawesome_fontawesome_free_brands__WEBPACK_IMPORTED_MODULE_2__["faFacebookF"], _fortawesome_fontawesome_free_brands__WEBPACK_IMPORTED_MODULE_2__["faInstagram"], _fortawesome_fontawesome_free_brands__WEBPACK_IMPORTED_MODULE_2__["faLinkedin"], _fortawesome_fontawesome_free_solid__WEBPACK_IMPORTED_MODULE_3__["faMobileAlt"], _fortawesome_fontawesome_free_solid__WEBPACK_IMPORTED_MODULE_3__["faPhone"]]);
-window.$ = window.jQuery = jquery__WEBPACK_IMPORTED_MODULE_0___default.a;
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slick').slick({
+window.$ = window.jQuery = jquery__WEBPACK_IMPORTED_MODULE_4___default.a;
+jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_4___default()('.slick').slick({
     slidesToShow: 1,
     autoplay: true,
     pauseOnDotsHover: false,
