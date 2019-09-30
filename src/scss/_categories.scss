@@ -1,0 +1,25 @@
+.category-tease {
+    @apply w-full px-6 mb-12;
+    &__text-container {
+        @apply bg-cover bg-center h-64 flex flex-col justify-end relative overflow-hidden;
+    }
+    &__text {
+        @apply uppercase relative z-10 text-center font-sans font-bold bg-white m-2 p-4 text-gray-800 text-sm;
+        transition: background-color .3s ease;
+    }
+    &__thumbnail {
+        @apply h-full absolute top-0 left-0 w-full z-0 bg-cover bg-center;
+        transition: transform .3s ease;
+    }
+    &:hover {
+        .category-tease__thumbnail {
+            transform: scale(1.1, 1.1);
+        }
+        .category-tease__text {
+            background-color: inherit;
+        }
+    }
+    @screen md {
+        @apply w-1/3;
+    }
+}
