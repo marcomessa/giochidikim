@@ -1,8 +1,7 @@
-<div class="category-tease">
+<div class="category-tease {{ size ? 'w-1/2' : 'w-1/3' }}">
     <a href="{{ 'categorie'|page({slug: category.slug}) }}">
-        <div style="background-color: {{ category.color }}" class="category-tease__text-container">
+        <div style="background-color: {{ category.color ? category.color : category.parent.color }}" class="category-tease__text-container">
             <h2 class="category-tease__text">{{ category.title }}</h2>
-
             <div style="background-image: url({{ category.thumbnail.getPath() }})" class="category-tease__thumbnail">
             </div>
         </div>
