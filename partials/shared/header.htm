@@ -1,35 +1,51 @@
 <header class="header">
-    <div class="container">
-        <ul class="flex justify-end -mx-2 mb-4">
-            <li class="px-2">
-                <a class="flex" href="tel:+390721583091">
-                    <div class="flex-initial flex justify-center items-center w-6 bg-orange text-white mx-1">
-                        <i class="fas fa-phone text-xs"></i>
-                    </div>
-                    <span class="font-bold">
+    <div class="bg-orange md:bg-white">
+        <div class="container">
+            <ul class="flex justify-start md:justify-end -mx-2 mb-4">
+                <li class="px-1 md:px-2">
+                    <a class="flex" href="tel:+390721583091">
+                        <div class="flex-initial flex justify-center items-center w-6 h-6 bg-orange text-white mx-1">
+                            <i class="fas fa-phone text-xs"></i>
+                        </div>
+                        <span class="font-bold hidden md:inline">
                         +39 0721 583091
                     </span>
-                </a>
-            </li>
-            <li class="px-2">
-                <a class="flex" href="tel:+393283963433">
-                    <div class="flex-initial flex justify-center items-center w-6 bg-orange text-white mx-1">
-                        <i class="fas fa-mobile-alt text-xs"></i>
-                    </div>
-                    <span class="font-bold">
+                    </a>
+                </li>
+                <li class="px-1 md:px-2">
+                    <a class="flex" href="tel:+393283963433">
+                        <div class="flex-initial flex justify-center items-center w-6 h-6 bg-orange text-white mx-1">
+                            <i class="fas fa-mobile-alt text-xs"></i>
+                        </div>
+                        <span class="font-bold hidden md:inline">
                         +39 328 3963433
                     </span>
-                </a>
-            </li>
-        </ul>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
         <div class="flex justify-between flex-wrap">
-            <div class="flex-initial relative">
-                <a class="header__logo" href="{{ 'home' | page }}">
-                    <img width="158" src="{{ 'assets/img/logo.png'| theme }}" alt="giochi di kim">
+            <div class="flex-initial flex justify-between relative pb-3 md:pb-0">
+                <a class="header__logo flex-initial" href="{{ 'home' | page }}">
+                    <picture>
+                        <source media="(max-width: 799px)" srcset="{{ 'assets/img/logo-footer.png'| theme }}">
+                        <source media="(min-width: 800px)" srcset="{{ 'assets/img/logo.png'| theme }}">
+                        <img src="{{ 'assets/img/logo.png'| theme }}" alt="Giochi di Kim">
+                    </picture>
+
                 </a>
+                <div class="md:hidden w-1/4">
+                    <button class="hamburger focus:outline-none hamburger--collapse float-right" type="button">
+                      <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                      </span>
+                    </button>
+                </div>
             </div>
             {% if staticMenu.menuItems %}
-                <ul class="menu ">
+                <ul class="menu hidden">
                     {% for item in staticMenu.menuItems if not item.viewBag.isHidden %}
                         <li role="presentation" class="{{ item.isActive ? 'active' : '' }} {{ item.isChildActive ? 'child-active' : '' }} {{ item.viewBag.cssClass }} menu__item {{ item.items ? 'toggleMenu' }}">
                             {% if item.url %}
@@ -69,7 +85,7 @@
         </div>
     </div>
 
-    <div class="bg-orange py-1">
+    <div class="bg-orange py-1 hidden">
         <div class="container">
             <div class="flex relative">
                 <div class="w-full">

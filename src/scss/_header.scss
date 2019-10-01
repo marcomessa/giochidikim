@@ -1,14 +1,18 @@
 .header {
     @apply relative;
     &__logo {
-        @apply absolute left-0 w-40 z-50 bg-white rounded-full flex items-center px-3;
-        top: 50%;
-        transform: translateY(-39%);
-        width: 158px;
-        height: 158px;
-        img {
-            display: block;
-            width: 102px;
+        @apply w-1/2;
+    }
+    @screen md {
+        &__logo {
+            @apply absolute left-0 w-40 z-50 bg-white rounded-full flex items-center px-3;
+            top: 50%;
+            transform: translateY(-39%);
+            width: 158px;
+            height: 158px;
+            img {
+                width: 102px;
+            }
         }
     }
 }
