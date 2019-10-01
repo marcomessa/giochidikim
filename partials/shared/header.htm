@@ -1,6 +1,6 @@
 <header class="header">
     <div class="container">
-        <ul class="flex justify-end -mx-2 mb-10">
+        <ul class="flex justify-end -mx-2 mb-4">
             <li class="px-2">
                 <a class="flex" href="tel:+390721583091">
                     <div class="flex-initial flex justify-center items-center w-6 bg-orange text-white mx-1">
@@ -22,49 +22,50 @@
                 </a>
             </li>
         </ul>
-        <div class="flex justify-between flex-wrap mb-6">
+        <div class="flex justify-between flex-wrap">
             <div class="flex-initial relative">
                 <a class="header__logo" href="{{ 'home' | page }}">
                     <img width="158" src="{{ 'assets/img/logo-header.png'| theme }}" alt="giochi di kim">
                 </a>
             </div>
-            <ul class="flex flex-initial justify-end -mx-5">
-                <li class="px-5 text-orange font-bold">
-                    <a href="{{ 'kim' | page }}">
-                        Giochi di Kim
-                    </a>
-                </li>
+            {% if staticMenu.menuItems %}
+                <ul class="menu ">
+                    {% for item in staticMenu.menuItems if not item.viewBag.isHidden %}
+                        <li role="presentation" class="{{ item.isActive ? 'active' : '' }} {{ item.isChildActive ? 'child-active' : '' }} {{ item.viewBag.cssClass }} menu__item {{ item.items ? 'toggleMenu' }}">
+                            {% if item.url %}
+                                <a href="{{ item.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }}>
+                                    {{ item.title }}
+                                </a>
+                            {% else %}
+                                <span>{{ item.title }}</span>
+                            {% endif %}
 
-                <li class="px-5 text-orange font-bold">
-                    <a href="{{ 'categorie' | page }}">
-                        Categorie
-                    </a>
-                </li>
-                <li class="px-5 text-orange font-bold">
-                    <a href="{{ 'attivita' | page }}">
-                        Attività didattiche
-                    </a>
-                </li>
-
-                <li class="px-5 text-orange font-bold">
-                    <a href="{{ 'marchi' | page }}">
-                        Marchi
-                    </a>
-                </li>
-
-                <li class="px-5 text-orange font-bold">
-                    <a href="{{ 'servizi' | page }}">
-                        Servizi
-                    </a>
-                </li>
-
-                <li class="px-5 text-orange font-bold">
-                    <a href="{{ 'contatti' | page }}">
-                        Contatti
-                    </a>
-                </li>
-
-            </ul>
+                            {% if item.items %}
+                                <div class="menu__submenu">
+                                    <div class="container">
+                                        <div class="flex">
+                                            <ul class="flex flex-wrap">
+                                                {% for subItem in item.items %}
+                                                    <li class="menu__subitem ">
+                                                        <a href="{{ subItem.url }}">
+                                                            <span class="menu__icon">
+                                                                {% partial 'menu/svg' color=subItem.viewBag.color %}
+                                                            </span>
+                                                            <span class="menu__text">
+                                                                {{ subItem.title }}
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                {% endfor %}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         </div>
     </div>
 

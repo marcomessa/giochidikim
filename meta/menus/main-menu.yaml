@@ -1,0 +1,76 @@
+items:
+    -
+        title: 'Giochi di Kim'
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: kim
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Categorie
+        type: macroCategories
+        code: ''
+        cmsPage: categorie
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Attività didattiche'
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: attivita
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Marchi
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: marchi
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Servizi
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: servizi
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Contatti
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: contatti
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: 'Main menu'

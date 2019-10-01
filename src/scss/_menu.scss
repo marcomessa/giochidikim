@@ -1,0 +1,50 @@
+.menu {
+    @apply flex flex-initial justify-end -mx-5;
+    &__item {
+        @apply px-5 text-orange font-bold;
+        & > a {
+            @apply inline-block py-6;
+        }
+
+        &.toggleMenu:hover {
+            .menu__submenu {
+                @apply block;
+                transform: translate3d(0, 0, 0);
+                transition: transform .3s ease-out, opacity .3s ease-out, visibility 0s linear;
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__submenu {
+        @apply absolute bg-white w-full z-40 left-0 border-t-4 border-orange pt-16 pb-10;
+        transition: transform .3s ease-out, opacity .3s ease-out, visibility 0s linear .3s;
+        transform: translate3d(0, 40px, 0);
+        visibility: hidden;
+        opacity: 0;
+
+    }
+
+    &__subitem {
+        @apply w-1/3 mb-4;
+        a {
+            @apply flex -mx-2 text-gray-800;
+            &:hover {
+                svg {
+                    transform: scale(1.1, 1.1);
+                    transition: all .3s ease;
+                }
+                @apply underline;
+            }
+        }
+    }
+
+    &__icon {
+        @apply w-12 px-2;
+    }
+
+    &__text {
+        @apply flex-auto self-center px-2 uppercase text-sm;
+    }
+}

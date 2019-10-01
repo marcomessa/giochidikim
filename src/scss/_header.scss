@@ -1,6 +1,7 @@
 .header {
+    @apply relative;
     &__logo {
-        @apply absolute left-0 w-40 z-10;
+        @apply absolute left-0 w-40 z-50;
         top: 50%;
         transform: translateY(-39%);
     }
