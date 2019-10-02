@@ -52,12 +52,12 @@ isSingle = 1
             </div>
         </div>
 
-        {% for item in currentCategory.gallery %}
+        {% for product in currentCategory.products %}
             <div class="w-full md:w-1/4 px-4 mb-12">
                 <div class="border border-orange p-4">
-                    <img class="w-full mb-2" src="{{ item.getPath() }}" alt="giochi di kim">
+                    <img class="w-full mb-2" src="{{ product.thumbnail.getThumb(500, 500, {mode: 'crop'}) }}" alt="giochi di kim">
                     <p class="uppercase font-bold">
-                        {{ item.title }}
+                        {{ product.title }}
                     </p>
                 </div>
             </div>
@@ -66,11 +66,16 @@ isSingle = 1
 </div>
 
 <div class="bg-beige py-10">
-    <h2 class="uppercase font-bold text-2xl text-center">i nostri marchi</h2>
-    <p class="text-center">una visione del giocåo come attività che riesca a stimolare le capacità motorie, cognitive,
+    <h2 class="uppercase font-bold text-4xl text-center text-orange">
+        I nostri marchi
+    </h2>
+    <p class="text-center">Una visione del gioco come attività che riesca a stimolare le capacità motorie, cognitive,
         intellettive e creative di ogni bimbo.</p>
     <ul class="flex justify-center pt-6">
-        <li class="mx-4"><img width="90" src="{{ 'assets/img/gowi.jpg'| theme }}" alt="gowi"></li>
-        <li class="mx-4"><img width="90" src="{{ 'assets/img/gotz.jpg'| theme }}" alt="gotz"></li>
+        {% for brand in currentCategory.brands %}
+            <li class="mx-4">
+                <img width="90" src="{{ brand.thumbnail.getPath() }}" alt="{{brand.title}}">
+            </li>
+        {% endfor %}
     </ul>
 </div>
