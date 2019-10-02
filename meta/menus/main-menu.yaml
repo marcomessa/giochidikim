@@ -14,12 +14,25 @@ items:
             isExternal: '0'
     -
         title: Categorie
+        nesting: ''
         type: macroCategories
+        url: ''
         code: ''
+        reference: ''
         cmsPage: categorie
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Fasce d''età'
+        type: ageGroups
+        code: ''
+        cmsPage: fascia-eta
+        viewBag:
+            isHidden: '0'
+            cssClass: 'md:hidden'
             isExternal: '0'
     -
         title: 'Attività didattiche'

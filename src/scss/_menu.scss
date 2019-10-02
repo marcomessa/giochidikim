@@ -1,5 +1,8 @@
 .menu {
-    @apply flex flex-initial justify-end -mx-5;
+    @apply absolute bg-white left-0;
+    top: 100%;
+    z-index: 100;
+    width: 100%;
     &__item {
         @apply px-5 text-orange font-bold;
         & > a {
@@ -46,5 +49,11 @@
 
     &__text {
         @apply flex-auto self-center px-2 uppercase text-sm;
+    }
+}
+
+@screen md {
+    .menu {
+        @apply flex flex-initial justify-end -mx-5 static bg-transparent;
     }
 }
