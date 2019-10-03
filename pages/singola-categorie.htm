@@ -44,7 +44,7 @@ isSingle = 1
 <div class="container">
     <div class="flex flex-wrap -mx-4 pt-16 md:pt-10">
         <div class="w-full md:w-1/4 px-4 mb-12 self-stretch">
-            <div class="bg-arancio-chiaro flex flex-col justify-between h-full p-3">
+            <div class="bg-arancio-chiaro flex flex-col justify-between h-full py-4 px-6">
                 <p class="uppercase font-light text-gray-800 text-xl leading-tight">
                     Alcuni dei prodotti che puoi trovare in negozio</p>
                 <p class="font-bold text-xs">
@@ -54,10 +54,10 @@ isSingle = 1
 
         {% for product in currentCategory.products %}
             <div class="w-full md:w-1/4 px-4 mb-12">
-                <div class="border border-orange p-4">
-                    <img class="w-full mb-2" src="{{ product.thumbnail.getThumb(500, 500, {mode: 'crop'}) }}" alt="giochi di kim">
-                    <p class="uppercase font-bold">
-                        {{ product.title }}
+                <div class="border border-orange px-4 py-3">
+                    <img class="w-full mb-4" src="{{ product.thumbnail.getThumb(500, 500, {mode: 'crop'}) }}" alt="giochi di kim">
+                    <p class="uppercase text-center text-sm">
+                        {{ product.brand.title ~ ' | ' ~ product.title }}
                     </p>
                 </div>
             </div>
@@ -73,7 +73,7 @@ isSingle = 1
         intellettive e creative di ogni bimbo.</p>
     <ul class="flex justify-center pt-6">
         {% for brand in currentCategory.brands %}
-            <li class="mx-4">
+            <li class="mx-4 self-center">
                 <img width="90" src="{{ brand.thumbnail.getPath() }}" alt="{{brand.title}}">
             </li>
         {% endfor %}

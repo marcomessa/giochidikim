@@ -5,11 +5,12 @@
     }
     @screen md {
         &__logo {
-            @apply absolute left-0 w-40 z-50 bg-white rounded-full flex items-center px-3;
+            @apply absolute left-0 w-40 bg-white rounded-full flex items-center px-3;
             top: 50%;
             transform: translateY(-39%);
             width: 158px;
             height: 158px;
+            z-index: 999;
             img {
                 width: 102px;
             }

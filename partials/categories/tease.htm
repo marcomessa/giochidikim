@@ -1,4 +1,4 @@
-<div class="category-tease {{ size ? 'w-1/2' : 'w-1/3' }}">
+<div class="category-tease w-full {{ size ? 'md:w-1/2' : 'md:w-1/3' }}">
     <a href="{{ not category.parent ?
     'categorie'|page({slug: category.slug}) :
     'singola-categorie'|page({slug: category.parent.slug, subslug: category.slug})}}">

@@ -37,7 +37,7 @@
 
                 </a>
                 <div class="md:hidden w-1/4">
-                    <button class="hamburger focus:outline-none hamburger--collapse float-right" type="button">
+                    <button id="toggleMenuButton" data-toggler="is-active" data-toggle="mainMenu toggleMenuButton site" class="hamburger focus:outline-none hamburger--collapse float-right" type="button">
                       <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
                       </span>
@@ -45,36 +45,49 @@
                 </div>
             </div>
             {% if staticMenu.menuItems %}
-                <ul class="menu">
+                <ul id="mainMenu" data-toggler="is-active" class="menu overflow-hidden">
                     {% for item in staticMenu.menuItems if not item.viewBag.isHidden %}
-                        <li role="presentation" class="{{ item.isActive ? 'active' : '' }} {{ item.isChildActive ? 'child-active' : '' }} {{ item.viewBag.cssClass }} menu__item {{ item.items ? 'toggleMenu' }}">
+                        <li role="presentation" class="{{ item.isActive ? 'active' : '' }} {{ item.isChildActive ? 'child-active' : '' }} {{ item.viewBag.cssClass }} menu__item {{ item.items ? 'toggleMenu' }}" {{ item.items ? 'data-toggle=' ~ str_slug(item.title) }}>
                             {% if item.url %}
-                                <a href="{{ item.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }}>
+                                <a class="relative md:static" href="{{ item.items ? '#' : item.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }}>
                                     {{ item.title }}
+                                    {% if item.items %}
+                                        <div class="menu__caret md:hidden">
+                                            <i class="fas fa-angle-right"></i>
+                                        </div>
+                                    {% endif %}
                                 </a>
                             {% else %}
                                 <span>{{ item.title }}</span>
                             {% endif %}
 
                             {% if item.items %}
-                                <div class="menu__submenu">
-                                    <div class="container">
-                                        <div class="flex">
-                                            <ul class="flex flex-wrap">
-                                                {% for subItem in item.items %}
-                                                    <li class="menu__subitem ">
-                                                        <a href="{{ subItem.url }}">
+                                <div id="{{ str_slug(item.title) }}" class="menu__submenu px-2" data-toggler="is-active">
+                                    <div class="container px-0 md:px-4">
+                                        <ul class="w-full flex flex-wrap">
+                                            <li class="md:hidden menu__subitem">
+                                                <a class="flex" href="#">
+                                                    <i class="fas fa-angle-left self-center mr-3"></i>
+                                                    <span class="self-center font-light uppercase">
+                                                        Indietro
+                                                        </span>
+                                                </a>
+                                            </li>
+                                            {% for subItem in item.items %}
+                                                <li class="menu__subitem ">
+                                                    <a href="{{ subItem.url }}">
+                                                        {% if subItem.viewBag.color %}
                                                             <span class="menu__icon">
                                                                 {% partial 'menu/svg' color=subItem.viewBag.color %}
                                                             </span>
-                                                            <span class="menu__text">
+                                                        {% endif %}
+                                                        <span class="menu__text">
                                                                 {{ subItem.title }}
                                                             </span>
-                                                        </a>
-                                                    </li>
-                                                {% endfor %}
-                                            </ul>
-                                        </div>
+                                                    </a>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
                                     </div>
                                 </div>
                             {% endif %}
