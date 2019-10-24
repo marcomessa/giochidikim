@@ -45,7 +45,7 @@
                 </div>
             </div>
             {% if staticMenu.menuItems %}
-                <ul id="mainMenu" data-toggler="is-active" class="menu overflow-hidden">
+                <ul id="mainMenu" data-toggler="is-active" class="menu">
                     {% for item in staticMenu.menuItems if not item.viewBag.isHidden %}
                         <li role="presentation" class="{{ item.isActive ? 'active' : '' }} {{ item.isChildActive ? 'child-active' : '' }} {{ item.viewBag.cssClass }} menu__item {{ item.items ? 'toggleMenu' }}" {{ item.items ? 'data-toggle=' ~ str_slug(item.title) }}>
                             {% if item.url %}
@@ -74,7 +74,7 @@
                                                 </a>
                                             </li>
                                             {% for subItem in item.items %}
-                                                <li class="menu__subitem ">
+                                                <li class="menu__subitem {{ subItem.isActive ? 'active' : '' }}">
                                                     <a href="{{ subItem.url }}">
                                                         {% if subItem.viewBag.color %}
                                                             <span class="menu__icon">
@@ -97,17 +97,18 @@
             {% endif %}
         </div>
     </div>
-
     <div class="bg-orange py-1 hidden md:block">
         <div class="container">
             <div class="flex relative">
                 <div class="w-full">
                     <ul class="flex -mx-4 text-white justify-end text-xs md:text-sm">
-                        <li class="uppercase px-4">da 0 a 1 anni</li>
-                        <li class="uppercase px-4">da 1 a 3 anni</li>
-                        <li class="uppercase px-4">da 3 in poi</li>
-                        <li class="uppercase px-4">da 6 in poi</li>
-                        <li class="uppercase px-4">da 8 in poi</li>
+                        {% for item in ageGroupsMenu.menuItems[0].items %}
+                            <li class="uppercase px-4">
+                                <a class="{{ item.isActive ? 'underline' }}" href="{{ item.url }}">
+                                    {{item.title}}
+                                </a>
+                            </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>

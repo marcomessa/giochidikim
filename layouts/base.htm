@@ -1,8 +1,11 @@
 [staticMenu]
 code = "main-menu"
+
+[staticMenu ageGroupsMenu]
+code = "agegroups"
 ==
 <!doctype html>
-<html lang="it">
+<html lang="it" class="overflow-x-hidden">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -13,7 +16,7 @@ code = "main-menu"
 
     {% styles %}
 </head>
-<body id="site" data-toggler="overflow-hidden" class="font-sans">
+<body id="site" data-toggler="overflow-hidden" class="font-sans overflow-x-hidden">
 
 {% partial 'shared/header' %}
 

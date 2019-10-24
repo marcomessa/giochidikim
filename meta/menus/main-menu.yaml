@@ -27,22 +27,22 @@ items:
             isExternal: '0'
     -
         title: 'Fasce d''età'
+        nesting: ''
         type: ageGroups
+        url: ''
         code: ''
+        reference: ''
         cmsPage: fascia-eta
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: 'md:hidden'
             isExternal: '0'
     -
         title: 'Attività didattiche'
-        nesting: ''
         type: cms-page
-        url: ''
         code: ''
-        reference: attivita
-        cmsPage: ''
-        replace: ''
+        reference: attivita-didattiche
         viewBag:
             isHidden: '0'
             cssClass: ''

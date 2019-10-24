@@ -1,36 +1,29 @@
 title = "Singola-attivita"
-url = "/singola-attivita"
+url = "/news/:slug"
 layout = "base"
 is_hidden = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "attivita-didattiche"
 ==
-<div class="container">
-    <img class="mx-auto pt-12 pb-24" width="724" src="{{ 'assets/img/img-baby.jpg'| theme }}" alt="giochi di kim">
+{% set post = blogPost.post %}
+<div class="container py-12">
+    <div class="flex justify-center">
+        <div class="w-full md:w-2/3">
+            <img class="w-full" width="724" src="{{ post.featured_images[0].getThumb(900, null, {'mode': 'crop'}) }}" alt="giochi di kim">
+        </div>
+    </div>
 </div>
 
 <div class="container">
-    <div class="flex mb-8">
+    <div class="flex mb-8 justify-center">
         <div class="w-full md:w-2/3">
             <h2 class="text-orange text-5xl">i miei primi suoni</h2>
             <p class="uppercase font-bold pb-4">per bambini da 12 a 36 mesi</p>
-            <p class="pb-4">La musica per i bambini è un’arte importante per la loro crescita, fin dalla prima infanzia.
-                L’uso della voce e del corpo saranno mezzo di espressione, l’approccio con oggetti sonori, l’ascolto e
-                conoscenza di strumenti musicali creeranno momenti di unione ed armonia. Convenzionato con Associazione
-                OASI DELLE MAMME</p>
-            <p class="pb-6">I laboratori saranno tenuti da Gina Jaime, clarinettista diplomata al conservatorio musicale
-                “G. Rossini” che da tempo si occupa in campo infantile dell’insegnamento della musica.
-            </p>
-            <p class="font-bold">Tre appuntamenti presso il negozio Giochi di Kim:</p>
-            <ul class="pb-6">
-                <li><b>sabato 28 luglio_</b> dalle 09.00 alle 10.00</li>
-                <li><b>sabato 4 agosto_</b> dalle 09.00 alle 10.00</li>
-                <li><b>sabato 11 agosto_</b> dalle 09.00 alle 10.00</li>
-            </ul>
-            <p>il costo degli incontri:</p>
-            <ul>
-                <li>singolo incontro Euro 20,00</li>
-                <li>due incontri Euro 30,00</li>
-                <li>tre incontri Euro 50,00</li>
-            </ul>
+            <div class="post-content">
+                {{ post.content_html|raw }}
+            </div>
         </div>
     </div>
     <div class="flex justify-center mb-24">
@@ -39,3 +32,6 @@ is_hidden = 0
         </button>
     </div>
 </div>
+
+
+

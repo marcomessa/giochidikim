@@ -28,7 +28,9 @@ isSingle = 1
             <ul class="pt-4 font-bold">
                 {% for ageGroup in currentCategory.ageGroups %}
                     <li class="py-2 flex">
-                        <img width="68" src="{{ 'assets/img/baby-category.png'| theme }}" alt="giochi di kim">
+                        <div class="img-container">
+                            <img width="68" src="{{ 'assets/img/baby-category.png'| theme }}" alt="giochi di kim">
+                        </div>
                         <p class="pl-3 pt-5">{{ ageGroup.title }}</p>
                     </li>
                 {% endfor %}

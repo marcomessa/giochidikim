@@ -5,7 +5,6 @@
     width: 100%;
     height: calc(100vh - 109px);
     transform: translate3d(100%, 0, 0);
-    transition: transform .3s ease;
     &.is-active {
         transform: translate3d(0, 0, 0);
     }
@@ -59,9 +58,16 @@
         transform: none;
         @apply py-0 relative;
         height: auto;
+        transition: transform .3s ease;
         &__item {
             & > a {
                 @apply inline-block py-6 border-none;
+            }
+            &.active,
+            &.child-active {
+                & > a {
+                    @apply underline;
+                }
             }
             &.toggleMenu:hover {
                 .menu__submenu {
@@ -88,6 +94,9 @@
             @apply w-1/3 mb-4;
             a {
                 @apply text-gray-800 border-none py-0;
+            }
+            &.active a {
+                @apply underline;
             }
         }
         &__icon {

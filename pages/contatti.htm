@@ -2,8 +2,13 @@ title = "Contatti"
 url = "/contatti"
 layout = "base"
 is_hidden = 0
+
+[contactForm]
+
+[googleMap]
+zoom = 4
 ==
-<img class="w-full" src="{{ 'assets/img/cartina.jpg'| theme }}" alt="cartina">
+{% component 'googleMap' %}
 
 <div class="container">
     <div class="flex flex-wrap pb-20">
@@ -23,14 +28,86 @@ is_hidden = 0
         </div>
         <div class="w-full md:w-2/3">
             <h2 class="text-3xl text-orange pb-2 pt-8">Richiedi informazioni</h2>
-            <p class="text-sm pb-4">Compila il form per ricevere le informazioniCearios esequis pro coreiciis rem sitio. </p>
+            <p class="text-sm pb-4">Compila il form per ricevere le informazioni</p>
+            <form data-request="onSendEmail"
+                  data-request-flash
+                  data-request-update="'contactForm::button': '#button-sent'"
+                  class="w-full">
+                {{ form_token() }}
+                <div class="flex flex-wrap -mx-3 mb-3">
+                    <div class="w-full md:w-1/2 px-3 mb-3 md:mb-0">
+                        <input class="block input"
+                               id="grid-first-name"
+                               type="text"
+                               placeholder="Nome*"
+                               name="nome">
+                    </div>
+                    <div class="w-full md:w-1/2 px-3">
+                        <input class="input"
+                               id="grid-last-name"
+                               type="text"
+                               placeholder="Cognome*"
+                               name="cognome">
+                    </div>
+                </div>
 
-            <input class="w-full border border-gray-300 py-2 px-4 mb-4" placeholder="Name" type="text">
-            <input class="w-full border border-gray-300 py-2 px-4 mb-4" placeholder="Cognome" type="text">
-            <input class="w-full border border-gray-300 py-2 px-4 mb-4" placeholder="E-mail" type="text">
-            <input class="w-full border border-gray-300 py-2 px-4 mb-4" placeholder="Indirizzo" type="text">
-            <input class="w-full border border-gray-300 py-2 px-4 mb-4" placeholder="Città" type="text">
-            <button class="border border-orange font-bold hover:bg-orange hover:text-white px-10 py-1 text-orange mt-4">Contattaci</button>
+                <div class="flex flex-wrap -mx-3 mb-3">
+                    <div class="w-full md:w-1/2 px-3 mb-3 md:mb-0">
+                        <input class="input"
+                               id="grid-first-name"
+                               type="text"
+                               placeholder="Azienda"
+                               name="azienda">
+                    </div>
+                    <div class="w-full md:w-1/2 px-3">
+                        <input class="input"
+                               id="grid-last-name"
+                               type="text"
+                               placeholder="Nazione"
+                               name="nazione">
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap -mx-3 mb-3">
+                    <div class="w-full md:w-1/2 px-3 mb-3 md:mb-0">
+                        <input class="input"
+                               id="grid-first-name"
+                               type="email"
+                               placeholder="E-mail*"
+                               name="email">
+                    </div>
+                    <div class="w-full md:w-1/2 px-3">
+                        <input class="input"
+                               id="grid-last-name"
+                               type="text"
+                               placeholder="Telefono"
+                               name="telefono">
+                    </div>
+                </div>
+                <div class="w-full">
+                    <textarea placeholder="Messaggio" name="messaggio" id="messaggio" cols="30" rows="10" class="input"></textarea>
+                </div>
+
+                <div class="flex flex-wrap -mx-2">
+                    <div class="w-full flex flex-wrap md:w-2/3 font-light mb-8 px-2">
+                        <p class="w-full text-xs font-light mb-5">Ho letto l'informativa e acconsento al trattamento dei miei
+                            dati personali
+                            per: la gestione della mia email per usi non commerciali, essere ricontattato da Giochi di Kim  per ricevere  maggiori informazioni a seguito della compilazione di questo form.
+                        </p>
+                        <div class="w-full">
+                            <input id="accetto" class="mr-2 leading-tight flex-initial" type="radio" value="1" name="privacy">
+                            <label for="accetto" class="text-sm mr-5">esprimo il consenso</label>
+                            <input id="rifiuto" class="mr-2 leading-tight" type="radio" value="0" name="privacy">
+                            <label for="rifiuto" class="text-sm">nego il consenso</label>
+                        </div>
+                    </div>
+                    <div id="button-sent" class="w-full md:w-1/3 md:text-right text-left px-2">
+                        {% partial contactForm~'::button' sent=sent %}
+                    </div>
+                </div>
+
+            </form>
+
         </div>
     </div>
 </div>

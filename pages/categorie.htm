@@ -6,7 +6,7 @@ is_hidden = 0
 [handleCategories]
 filterType = "cat"
 ==
-<div class="bg-cover h-40 md:mb-24 mb-16"
+<div class="bg-cover h-40 md:mb-24 mb-8"
      style="background-image: url({{ 'assets/img/marchi.jpg'| theme }})">
     <h2 class="text-4xl text-white text-center md:pt-8 pt-3 pb-2 font-title leading-none">Giochi educativi per tutte le
         età</h2>
@@ -21,7 +21,7 @@ filterType = "cat"
             {% partial 'handleCategories::sidebar' %}
         </div>
 
-        <div id="categoryList" class="w-full md:w-2/3 px-4 pb-32">
+        <div id="categoryList" class="w-full md:w-2/3 px-4 md:pb-24">
             {% partial 'handleCategories::categoryList' %}
         </div>
     </div>

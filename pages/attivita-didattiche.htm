@@ -1,0 +1,40 @@
+title = "Attivita"
+url = "/attivita-didattiche"
+layout = "base"
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "attivita-didattiche"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "attivita-didattiche"
+postPage = "singola-attivita"
+==
+<div class="bg-cover bg-center h-40 md:mb-24 mb-16"
+     style="background-image: url({{ 'assets/img/attività.jpg'| theme }})">
+    <h2 class="text-4xl text-white text-center pt-3 md:pt-8 pb-2 leading-none font-title">Attività didattiche</h2>
+    <p class="text-center text-white">una visione del gioco come attività che riesca a stimolare le capacità motorie,
+        cognitive, intellettive e creative di ogni bimbo.</p>
+</div>
+
+{% set posts = blogPosts.posts %}
+
+<div class="container">
+    <div class="flex flex-wrap md:pb-32 -mx-4">
+        {% for post in posts %}
+            <div class="w-full md:w-1/3 pb-6 md:pb-0 px-4 mb-8">
+                <a class="block" href="{{ post.url }}">
+                    <img class="w-full" src="{{ post.featured_images[0].getThumb(394, 296, {'mode': 'crop'}) }}" alt="{{ post.title }}">
+                    <div class="text-center py-10 bg-yellow">
+                        <p class="uppercase font-bold">{{post.title}}</p>
+                        <p class="font-light px-3">{{post.subtitle}}</p>
+                        <p class="text-orange font-bold pt-6 lowercase">Scopri le date</p>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+
+    </div>
+</div>
